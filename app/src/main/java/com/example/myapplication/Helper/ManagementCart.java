@@ -17,6 +17,18 @@ public class ManagementCart {
         this.tinyDB = new TinyDB(context);
     }
 
+    public String getfoodName(){
+        ArrayList<FoodDomain> listFood = getListCart();
+        String FoodName = "";
+        for(int i=0;i < listFood.size();i++) {
+            FoodName = FoodName + listFood.get(i).getTitle();
+
+        }
+
+        return FoodName;
+
+    }
+
     public void insertFood(FoodDomain item) {
         ArrayList<FoodDomain> listFood = getListCart();
         boolean existAlready = false;

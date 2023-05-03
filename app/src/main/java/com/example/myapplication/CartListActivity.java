@@ -75,6 +75,7 @@ public class CartListActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // 跳转到 OrderInfo Activity，并传递相关数据
                 Intent intent = new Intent(CartListActivity.this, OrderActivity.class);
+                intent.putExtra("item_Name",managementCart.getfoodName());
                 intent.putExtra("itemTotal", managementCart.getTotalFee());
                 intent.putExtra("tax", tax);
                 intent.putExtra("delivery", 10.0);
