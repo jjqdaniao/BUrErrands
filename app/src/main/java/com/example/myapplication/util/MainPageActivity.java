@@ -108,15 +108,15 @@ public class MainPageActivity extends AppCompatActivity {
         recyclerViewPopularList.setLayoutManager(linearLayoutManager);
 
         ArrayList<FoodDomain> foodList = new ArrayList<>();
-        foodList.add(new FoodDomain("Pepperoni pizza","pizza1","Otto\nSlice pepperoni, mozzarella cheese,fresh oregano,ground black pepper", 12.99));
-        foodList.add(new FoodDomain("Cheese Burger","burger","Wallace\nBeef, Gouda Cheese, Special Sauce, Lettuce, tomato",6.59));
-        foodList.add(new FoodDomain("Vegetable Pizza","pizza2","Otto\nOlive oil, vegetable oil, pitted kalamata, cherry tomatos",10.99));
-        foodList.add(new FoodDomain("Hot Brewed Coffee","hotbrewedcoffee","Starbucks\nHot Brewed Coffee",5.25));
-        foodList.add(new FoodDomain("Napoleones","napoleones","Starbucks\nNapoleones",4.50));
-        foodList.add(new FoodDomain("Fried Rice","sidesfriedrice","Panda Express\nFried rice with beans and eggs",4.40));
-        foodList.add(new FoodDomain("Dragon Roll","dragonroll","Basho\nWhite rice and vegetables rolled with fresh salmon",14.00));
-        foodList.add(new FoodDomain("The Poke","poke","Basho\nPoh-Keh, is a traditional food from Hawaii, which is tuna slice served with rice, vegetables and fruits. Many sauces to choose from",17.00));
-        foodList.add(new FoodDomain("Mobile Power","wirelesspb","T.J.Max\nXiaomi 10000mAh capacity, 18w with USB-C, supports 10w wireless super charge",49.00));
+        foodList.add(new FoodDomain("Pepperoni pizza","pizza1","Otto\nSlice pepperoni, mozzarella\nAddress:1075 CommonWealth Ave", 12.99));
+        foodList.add(new FoodDomain("Cheese Burger","burger","Wallace\nBeef, Gouda Cheese\nAddress:1075 CommonWealth Ave",6.59));
+        foodList.add(new FoodDomain("Vegetable Pizza","pizza2","Otto\nOlive oil, vegetable oil, pitted kalamata\nAddress:1075 CommonWealth Ave",10.99));
+        foodList.add(new FoodDomain("Hot Brewed Coffee","hotbrewedcoffee","Starbucks\nHot Brewed Coffee\nAddress:1075 CommonWealth Ave",5.25));
+        foodList.add(new FoodDomain("Napoleones","napoleones","Starbucks\nNapoleones\nAddress:1075 CommonWealth Ave",4.50));
+        foodList.add(new FoodDomain("Fried Rice","sidesfriedrice","Panda Express\nFried rice with eggs \nAddress:1075 CommonWealth Ave",4.40));
+        foodList.add(new FoodDomain("Dragon Roll","dragonroll","Basho\nWhite rice and vegetables rolled\nAddress:1075 CommonWealth Ave",14.00));
+        foodList.add(new FoodDomain("The Poke","poke","Basho\nPoh-Keh, is a traditional food from Hawaii\nAddress:809 CommonWealth Ave",17.00));
+        foodList.add(new FoodDomain("Mobile Power","wirelesspb","T.J.Max\nXiaomi 1wmAh capacity, 18w with USB-C\nAddress:1075 CommonWealth Ave",49.00));
 
         adapter2 = new PopularAdapter(foodList);
         recyclerViewPopularList.setAdapter(adapter2);
