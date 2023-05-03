@@ -74,7 +74,7 @@ public class OrderActivity extends AppCompatActivity {
 //        String orderDetail = "Sample order details";
         OrderModel newOrder = new OrderModel(String.valueOf(System.currentTimeMillis()), orderDetails);
         orderHistoryList.add(newOrder);
-        startActivity(new Intent(OrderActivity.this, OrderHistoryActivity.class));
+        startActivity(new Intent(OrderActivity.this, MainPageActivity.class));
 
         finish();
 
