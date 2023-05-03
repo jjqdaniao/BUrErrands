@@ -29,6 +29,22 @@
             android:background="@color/deep_grey" />
 
         <TextView
+            android:id="@+id/tv_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Item Name:"
+            android:textColor="@color/deep_grey"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="item"
+            android:textSize="16sp" />
+
+        <TextView
             android:id="@+id/tv_item_total_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -36,6 +52,7 @@
             android:text="Item Total:"
             android:textColor="@color/deep_grey"
             android:textSize="16sp" />
+
 
         <TextView
             android:id="@+id/tv_item_total"

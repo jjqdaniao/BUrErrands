@@ -1,10 +1,11 @@
 package com.example.myapplication;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 
 public class OrderDetailActivity extends AppCompatActivity {
 
@@ -23,6 +24,7 @@ public class OrderDetailActivity extends AppCompatActivity {
         String orderDetailsText = intent.getStringExtra("orderDetails");
 
         orderId.setText("Order ID: " + orderIdText);
-        orderDetails.setText("Order Details: " + orderDetailsText);
+        orderDetails.setText(orderDetailsText);
+
     }
 }
