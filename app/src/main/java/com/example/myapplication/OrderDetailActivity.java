@@ -6,6 +6,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+
 public class OrderDetailActivity extends AppCompatActivity {
 
     TextView orderId, orderDetails;
@@ -24,5 +25,6 @@ public class OrderDetailActivity extends AppCompatActivity {
 
         orderId.setText("Order ID: " + orderIdText);
         orderDetails.setText(orderDetailsText);
+
     }
 }

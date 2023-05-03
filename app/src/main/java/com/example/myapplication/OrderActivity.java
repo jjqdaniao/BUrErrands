@@ -14,12 +14,11 @@ import com.example.myapplication.util.MainPageActivity;
 import com.example.myapplication.util.OrderHistory;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class OrderActivity extends AppCompatActivity {
     TextView itemTotal, tax, delivery, total,item_Name;
     Button placeOrder;
-    //    private Double itemTotalValue,taxValue,deliveryValue,totalValue;
+
     public static ArrayList<OrderModel> orderHistoryList = new ArrayList<OrderModel>();
 
     @Override
@@ -62,18 +61,23 @@ public class OrderActivity extends AppCompatActivity {
         Toast.makeText(this, "The order has been completed, thank you for your purchase!", Toast.LENGTH_SHORT).show();
 
 
+
         Intent intent = new Intent(this, OrderHistoryActivity.class);
         startActivity(intent);
 
         String orderDetails = String.format("Item Name:%s%n",itemName) + String.format("Item Total: $%.2f%n",itemTotalValue)+
                 String.format("Tax: $%.2f%n",taxValue) +String.format("Delivery: $%.2f%n",deliveryValue)+String.format("Total: $%.2f%n",totalValue);
+      
+         
         OrderHistory orderHistory = new OrderHistory(this);
         orderHistory.addOrder(orderDetails);
 //        String orderDetail = "Sample order details";
         OrderModel newOrder = new OrderModel(String.valueOf(System.currentTimeMillis()), orderDetails);
         orderHistoryList.add(newOrder);
         startActivity(new Intent(OrderActivity.this, OrderHistoryActivity.class));
+
         finish();
+
     }
 }
 

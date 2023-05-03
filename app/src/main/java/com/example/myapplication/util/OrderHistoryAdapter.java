@@ -38,6 +38,7 @@ public class OrderHistoryAdapter extends RecyclerView.Adapter<OrderHistoryAdapte
     public void onBindViewHolder(@NonNull OrderHistoryViewHolder holder, int position) {
         final OrderModel currentOrder = orderHistory.get(position);
         holder.orderId.setText("Order ID: " + currentOrder.getOrderId());
+
         holder.orderDetails.setText( currentOrder.getOrderDetails());
 
         // Add click listener for each order to open a separate Order Detail Activity
