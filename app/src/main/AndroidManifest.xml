@@ -53,6 +53,7 @@
         <activity
             android:name=".OrderHistoryActivity"
             android:exported="false" />
+        <activity android:name=".OrderDetailActivity" />
         <activity
             android:name=".util.OrderHistory"
             android:exported="true" /> <!-- <activity -->

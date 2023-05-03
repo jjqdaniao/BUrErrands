@@ -12,10 +12,13 @@ import com.example.myapplication.Helper.ManagementCart;
 import com.example.myapplication.util.MainPageActivity;
 import com.example.myapplication.util.OrderHistory;
 
+import java.util.ArrayList;
+
 public class OrderActivity extends AppCompatActivity {
     TextView itemTotal, tax, delivery, total;
     Button placeOrder;
 //    private Double itemTotalValue,taxValue,deliveryValue,totalValue;
+    public static ArrayList<OrderModel> orderHistoryList = new ArrayList<OrderModel>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,10 +59,15 @@ public class OrderActivity extends AppCompatActivity {
 
          Intent intent = new Intent(this, MainPageActivity.class);
          startActivity(intent);
+
         String orderDetails = String.format("Item Total: $%.2f, Tax: $%.2f, Delivery: $%.2f, Total: $%.2f",
                 itemTotalValue,taxValue,deliveryValue,totalValue);
         OrderHistory orderHistory = new OrderHistory(this);
         orderHistory.addOrder(orderDetails);
+//        String orderDetail = "Sample order details";
+        OrderModel newOrder = new OrderModel(String.valueOf(System.currentTimeMillis()), orderDetails);
+        orderHistoryList.add(newOrder);
+        startActivity(new Intent(OrderActivity.this, OrderHistoryActivity.class));
          finish();
     }
 }
