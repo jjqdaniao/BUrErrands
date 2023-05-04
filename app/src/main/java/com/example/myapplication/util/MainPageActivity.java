@@ -116,7 +116,7 @@ public class MainPageActivity extends AppCompatActivity {
         foodList.add(new FoodDomain("Fried Rice","sidesfriedrice","Panda Express\nFried rice with eggs \nAddress:1075 CommonWealth Ave",4.40));
         foodList.add(new FoodDomain("Dragon Roll","dragonroll","Basho\nWhite rice and vegetables rolled\nAddress:1075 CommonWealth Ave",14.00));
         foodList.add(new FoodDomain("The Poke","poke","Basho\nPoh-Keh, is a traditional food from Hawaii\nAddress:809 CommonWealth Ave",17.00));
-        foodList.add(new FoodDomain("Mobile Power","wirelesspb","T.J.Max\nXiaomi 1wmAh capacity, 18w with USB-C\nAddress:1075 CommonWealth Ave",49.00));
+        foodList.add(new FoodDomain("Mobile Power","wirelesspb","T.J.Max\nXiaomi 1wmAh capacity, 18w with USB-C\nAddress:1075 CommonWealth Ave",4.90));
 
         adapter2 = new PopularAdapter(foodList);
         recyclerViewPopularList.setAdapter(adapter2);
